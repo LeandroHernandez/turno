@@ -1,0 +1,65 @@
+<!-- <p>profile works!</p> -->
+
+<!-- <div nz-row nzJustify="center" nzAlign="middle" class="profile-nav-row">
+  <div nz-col>
+    <h6>Perfil de {{ user?.names }}</h6>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col>
+    <nz-card nzTitle="Mi informacion personal">
+      <div nz-row nzJustify="center">
+        <div nz-col nzSpan="24">
+          <p>Nombres: {{ user?.names }}</p>
+          <p>Apellidos: {{ user?.surnames }}</p>
+          <p>Tipo de documento: {{ user?.documentType }}</p>
+          <p>Numero de documento: {{ user?.documentNumber }}</p>
+          <p>Correo: {{ user?.email }}</p>
+        </div>
+      </div>
+    </nz-card>
+  </div>
+</div>
+<div nz-row>
+  <div nz-col>
+    <nz-card nzTitle="Mis negocios">
+      <div nz-row nzJustify="center">
+        <div nz-col nzSpan="24">
+          <b
+            >{{ user?.establishments?.length | number }} negocios registrados</b
+          >
+        </div>
+      </div>
+    </nz-card>
+  </div>
+  <div nz-col>
+    <nz-card nzTitle="Mis citas y compras">
+      <div nz-row nzJustify="center">
+        <div nz-col nzSpan="24">
+          <b
+            >{{ user?.requestedAppointments?.length | number }} citas agendadas
+            y {{ user?.requestedPurchases?.length | number }} compras en espera
+          </b>
+        </div>
+      </div>
+    </nz-card>
+  </div>
+</div> -->
+
+<div nz-row class="nz-row-container">
+  <div nz-col class="nz-col-container">
+    <div nz-row class="nz-row-nav" nzAlign="middle">
+      <div nz-col nzSpan="24" class="nz-col-nav">
+        <!-- <app-nav (placeCenter)="changeMapCenter($event)"></app-nav> -->
+        <!-- <h3>Component nav</h3> -->
+        <app-header></app-header>
+      </div>
+    </div>
+    <div nz-row class="nz-row-content">
+      <div nz-col nzSpan="24" class="nz-col-content">
+        <!-- <h3>Component content</h3> -->
+        <app-content></app-content>
+      </div>
+    </div>
+  </div>
+</div>

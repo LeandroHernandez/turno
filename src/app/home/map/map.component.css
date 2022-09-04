@@ -1,0 +1,16 @@
+/* #map {
+  height: 100%;
+  width: 100%;
+} */
+.nz-row-container {
+  height: 90.9%;
+}
+.nz-row-nav {
+  min-height: 10%;
+  padding: 10px;
+}
+nz-spin, mgl-map, .nz-row-map {
+  height: 100%;
+  width: 100%;
+  /* position: relative; */
+}

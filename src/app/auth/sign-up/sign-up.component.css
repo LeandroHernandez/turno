@@ -1,0 +1,16 @@
+.nz-row-log-in-container {
+  height: 100%;
+  width: 100%;
+}
+
+.nz-card {
+  /* width: 270px;
+  min-width: 270px; */
+  border-radius: 7px;
+  /* border-top-right-radius: 10px; */
+  box-shadow: 7px 7px #1a334d;
+}
+
+.nz-col-content-form {
+  margin-bottom: 10px;
+}

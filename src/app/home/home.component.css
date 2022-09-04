@@ -1,0 +1,29 @@
+/* .row {
+  height: 100%;
+}
+.map:hover {
+  opacity: 0.35;
+  transition: opacity 500ms;
+}
+.map {
+  background-color: rgb(255, 214, 139);
+}
+.map h6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  color: white;
+  border: solid 1px black;
+}
+.app-map {
+  position: relative;
+}
+.auth {
+  background: #1a334d;
+}
+.map img {
+  height: 100%;
+  width: 100%;
+} */

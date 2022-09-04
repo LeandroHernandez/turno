@@ -1,0 +1,167 @@
+<!-- <p>sign-up works!</p> -->
+
+<div nz-row nzJustify="center" nzAlign="middle" class="nz-row-log-in-container">
+  <div nz-col class="nz-col-log-in-container">
+    <nz-card nzTitle="Bienvenido" [nzExtra]="signUp" class="nz-card">
+      <form
+        nz-form
+        [nzLayout]="'inline'"
+        [formGroup]="signUpForm"
+        (ngSubmit)="submitForm()"
+      >
+        <div nz-row nzJustify="center" class="nz-row-content-container-form">
+          <div nz-row nzJustify="center" class="nz-row-content-form">
+            <div nz-col class="nz-col-content-form">
+              <!-- <div nz-col class="nz-col-content-form col-documentType-input">
+                <nz-form-item>
+                  <nz-form-control
+                    nzErrorTip="!Porfavor ingresa tu tipo de documento¡"
+                  >
+                    <nz-input-group nzPrefixIcon="select">
+                      <input
+                        formControlName="documentType"
+                        nz-input
+                        placeholder="Mi tipo de documento"
+                      />
+                      Auto completado para las opciones de tipos de documento
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div> -->
+              <div nz-col class="nz-col-content-form col-documentType-input">
+                <nz-form-item>
+                  <nz-form-control
+                    nzErrorTip="!Porfavor ingresa tu tipo de documento¡"
+                  >
+                    <nz-select
+                      formControlName="documentType"
+                      nzPlaceHolder="Mi tipo de documento"
+                    >
+                      <nz-option
+                        *ngFor="let documentType of documentTypes"
+                        [nzValue]="documentType.type"
+                        [nzLabel]="documentType.type"
+                      ></nz-option>
+                    </nz-select>
+                    <ng-template #selectIcon>
+                      <span nz-icon nzType="select" nzTheme="outline"></span>
+                    </ng-template>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <div nz-col class="nz-col-content-form col-documentNumber-input">
+                <nz-form-item>
+                  <nz-form-control
+                    nzErrorTip="!Porfavor ingresa tu numero de documento¡"
+                  >
+                    <nz-input-group nzPrefixIcon="number">
+                      <input
+                        formControlName="documentNumber"
+                        nz-input
+                        type="number"
+                        placeholder="Mi numero de documento"
+                      />
+                      <!-- Auto completado para las opciones de tipos de documento -->
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <div nz-col class="nz-col-content-form col-names-input">
+                <nz-form-item>
+                  <nz-form-control nzErrorTip="!Porfavor ingresa tus nombres¡">
+                    <nz-input-group nzPrefixIcon="user">
+                      <input
+                        formControlName="names"
+                        nz-input
+                        placeholder="Mis nombres"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <div nz-col class="nz-col-content-form col-surnames-input">
+                <nz-form-item>
+                  <nz-form-control
+                    nzErrorTip="!Porfavor ingresa tus apellidos¡"
+                  >
+                    <nz-input-group nzPrefixIcon="user">
+                      <input
+                        formControlName="surnames"
+                        nz-input
+                        placeholder="Mis apellidos"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <div nz-col class="nz-col-content-form col-email-input">
+                <nz-form-item>
+                  <nz-form-control nzErrorTip="!Porfavor ingresa tu correo¡">
+                    <nz-input-group nzPrefixIcon="mail">
+                      <input
+                        formControlName="email"
+                        nz-input
+                        placeholder="Mi correo"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+            </div>
+            <div nz-col class="nz-col-content-form">
+              <div nz-col class="nz-col-content-form col-userName-input">
+                <nz-form-item>
+                  <nz-form-control
+                    nzErrorTip="!Porfavor ingresa tu nombre de usuario¡"
+                  >
+                    <nz-input-group nzPrefixIcon="user">
+                      <input
+                        formControlName="username"
+                        nz-input
+                        placeholder="Mi nombre de usuario"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <div nz-col class="nz-col-content-form col-password-input">
+                <nz-form-item>
+                  <nz-form-control
+                    nzErrorTip="!Porfavor ingresa tu contraseña¡"
+                  >
+                    <nz-input-group nzPrefixIcon="lock">
+                      <input
+                        formControlName="password"
+                        nz-input
+                        type="password"
+                        placeholder="Mi contraseña"
+                      />
+                    </nz-input-group>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+              <nz-form-item>
+                <nz-form-control>
+                  <button
+                    nz-button
+                    nzType="primary"
+                    type="submit"
+                    [disabled]="!signUpForm.valid"
+                  >
+                    Registrarse
+                  </button>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+        </div>
+      </form>
+    </nz-card>
+    <ng-template #signUp>
+      <a [routerLink]="['/auth/log-in']"
+        >Ingresar con usuario <br />
+        y contraseña</a
+      >
+    </ng-template>
+  </div>
+</div>
